@@ -32,4 +32,13 @@ public class Vehicle {
   public void reduceTollFee() {
     tollFee *= 0.5;
   }
+
+  public void honk() {
+    System.out.println("HONK!!!");
+  }
+  public void printInfo() {
+    System.out.println("-----------------------------------");
+    System.out.println("License plate: " + getLicensePlate() + "\nToll Fee: " + getTollFee() + "\nNumber of Passengers: " +
+            getPassengers());
+  }
 }

@@ -19,10 +19,13 @@ public class Taxi extends Car{
         fareCollected+= numRiders * farePerRider;
     }
 
-    public void printTaxi() {
-        System.out.println("-----------------------------------");
-        printCar();
-        System.out.println("Total Fare Collected: " + fareCollected);
+    public boolean chargeAndDropOffRiders(double farePerRider) {
+        fareCollected += farePerRider *= (getPassengers() - 1);
+        return dropOffPassengers(getPassengers()-1);
+    }
 
+    @Override
+    public void honk() {
+        System.out.println("I will fly instead");
     }
 }
